@@ -13,9 +13,9 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         $user = [
-            'name'     => 'Admin PKBM Usaha Mandiri',
-            'email'    => 'pkbmusahamandiri17@gmail.com',
-            'password' => bcrypt('pkbmum123'),
+            'name'     => 'Admin lpk lkp prisma one',
+            'email'    => 'lpkprismaone@gmail.com',
+            'password' => bcrypt('kademangan123'),
         ];
 
         User::create($user); // ✅ Gunakan create() agar hashed password disimpan dengan benar
