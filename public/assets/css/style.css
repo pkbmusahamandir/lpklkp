@@ -1,0 +1,258 @@
+/* — Reset dan Prevent Overflow — */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* — Responsiveness untuk Gambar dan Media — */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* — Font & Tombol — */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* Tombol umum */
+.btn-danger {
+  background-color: #bd0001;
+  border-radius: 15px;
+  border-color: #bd0001;
+  padding: 10px 25px;
+  color: white;
+}
+
+.btn-outline-danger {
+  background-color: transparent;
+  border-radius: 15px;
+  border-color: #bd0001;
+  padding: 10px 25px;
+  color: #bd0001;
+}
+
+/* =====================
+   NAVBAR STYLING
+===================== */
+
+.navbar {
+  padding: 10px 30px;
+  border-radius: 30px;
+  margin: 20px 100px;
+  transition: all 0.3s ease;
+}
+
+/* Kurangi margin agar tidak kepotong di HP */
+@media (max-width: 991px) {
+  .navbar {
+    margin: 10px 20px;
+    border-radius: 15px;
+    padding: 10px 15px;
+  }
+}
+
+/* Logo */
+.navbar-brand img {
+  height: 40px;
+  width: auto;
+}
+
+/* Link utama */
+.navbar-nav .nav-link {
+  color: #000000 !important;
+  font-weight: 600;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff !important;
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link.active {
+  color: #007bff !important;
+}
+
+/* Dropdown */
+.navbar-nav .dropdown-menu {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-nav .dropdown-item {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.navbar-nav .dropdown-item:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* Tombol Toggler */
+.navbar-toggler {
+  border-color: #ccc;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Saat navbar collapse (mobile) */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 10px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    display: block;
+    padding: 10px 0;
+    font-size: 17px;
+  }
+
+  .navbar-nav .dropdown-menu {
+    position: static;
+    float: none;
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+    border: none;
+  }
+
+  .navbar-nav .dropdown-item {
+    padding: 8px 0;
+  }
+
+  .d-flex {
+    justify-content: center !important;
+    margin-top: 10px;
+  }
+}
+
+/* =====================
+   HERO & LAINNYA
+===================== */
+.scroll-nav-active {
+  background-color: white;
+  box-shadow: 1px 1px 11px -1px rgba(1,1,1,0.08);
+}
+
+.text-nav-active {
+  color: black;
+}
+
+/* Hero section tinggi penuh */
+#hero {
+  position: relative;
+  height: 900px;
+  overflow: hidden;
+}
+
+.hero-slide {
+  height: 900px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Overlay dengan gradasi */
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5));
+  z-index: 5;
+}
+
+/* Hero text */
+.hero-text h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.hero-text h2 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+.hero-text p {
+  font-size: 1.8rem;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+/* Hero content turun */
+.hero-top {
+  margin-top: 120px;
+}
+
+#hero .row.program-row {
+  margin-top: 180px;
+}
+
+
+
+/* Responsif Hero */
+@media (max-width: 991px) {
+  .hero-top { margin-top: 80px; }
+  #hero .row.program-row { margin-top: 140px; }
+}
+
+@media (max-width: 767px) {
+  .hero-top { margin-top: 50px; }
+  #hero .row.program-row { margin-top: 100px; }
+}
+
+/* Card Profil */
+.profile-card {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  max-width: 450px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Layout row */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Icon */
+.icon-maps {
+  width: 70px;
+  height: 70px;
+  transition: transform 0.3s ease;
+}
+
+.icon-maps:hover {
+  transform: scale(1.1);
+}
